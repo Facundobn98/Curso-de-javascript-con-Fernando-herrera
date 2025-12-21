@@ -63,3 +63,4 @@ console.log(getaleatorio)
 //tarea pasarla a funcion flecha
 
 const numeroAleatorio = () => Math.random(); 
+
