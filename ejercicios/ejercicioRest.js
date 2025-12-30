@@ -37,3 +37,31 @@ const numeroChico = (...numeros) => {
     }
 }
 numeroChico(1,2,3,4,5,6,7)
+
+//ejercicio 5
+
+const contadorMayores = (...numeros) => {
+    let contador = 0;
+    for (let i = 0; i < numeros.length; i++){
+        if (numeros[i] > 10){
+            contador++
+        }
+    }
+    return contador;
+}
+
+contadorMayores(10,2,33,45,6,7,88)
+
+//ejercicio 6
+
+const contadorPares = (...numeros) => {
+    let contadorP = 0;
+    for(let i = 0; i < numeros.length; i++){
+        if (numeros[i] % 2 === 0){
+            contadorP = contadorP + 1;
+        }
+    }
+    return contadorP
+}
+
+contadorPares (1,2,3,4,5,6,7,8,9,10)
