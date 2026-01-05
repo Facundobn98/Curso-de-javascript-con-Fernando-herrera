@@ -33,3 +33,18 @@ if (dia === 0){
 else  {
     console.log('no es domingo')
 }
+
+// sin usar if ,else o switch, unicamente objetos
+// dia de la semana 3
+dia = 6;
+const diaLetras = {
+    0: 'domingo',
+    1: 'lunes',
+    2: 'martes',
+    3: 'miercoles',
+    4: 'jueves',
+    5: 'viernes',
+    6: 'sabado'
+};
+console.log( diaLetras[dia] || 'dia no definido')
+//operador OR 
