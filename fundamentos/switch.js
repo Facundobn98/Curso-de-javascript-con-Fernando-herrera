@@ -1,5 +1,4 @@
 
-
 const dia = 0;//domingo
 
 switch( dia ){
@@ -13,5 +12,5 @@ switch( dia ){
         console.log('Martes')
     default:
         console.log('no es lunes, martes o domingo')
-    }
+}
 
