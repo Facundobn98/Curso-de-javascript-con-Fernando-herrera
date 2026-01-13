@@ -10,13 +10,30 @@ while ( numero <= 9){
 //Mostrá solo los números pares entre 0 y 20.
 let numero2 = 20;
 
-while ( numero2 >= 1 ){
-    numero2 = numero2 - 1;
-    console.log(numero2)
+while (numero2 >= 0) {
+    if (numero2 % 2 === 0) {
+        console.log(numero2);
+    }
+    numero2--;
 }
+//3
+//Mostrá los números del 10 al 1 (cuenta regresiva).
+let numero3 = 10;
 
-let contador = 0;
+while ( numero3 >= 1 ){ 
+    console.log(numero3);
+    numero3 --;
 
-while (  ){
+}
+//4
+//Usá un while que vaya sumando números empezando
+//desde 1 hasta que la suma sea mayor o igual a 50.
+//Mostrá la suma final.
+
+let numeroSuma = 0;
+
+while ( numeroSuma <= 50 ){
     
+    console.log(`NUMERO ${numeroSuma} `)
+    numeroSuma++;
 }
