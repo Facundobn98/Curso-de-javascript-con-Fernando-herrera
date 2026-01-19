@@ -48,8 +48,11 @@ const crearDeck = (  ) => {
     }
 
     // Mostramos el deck completo en consola
-    console.log( deck )
+    console.log( deck );
+    deck = _.shuffle( deck );
 }
 
 // Llamamos a la función para que se ejecute
 crearDeck(  );
+
+
