@@ -50,6 +50,8 @@ const crearDeck = (  ) => {
     // Mostramos el deck completo en consola
     console.log( deck );
     deck = _.shuffle( deck );
+    console.log( deck )
+    return deck;
 }
 
 // Llamamos a la función para que se ejecute
