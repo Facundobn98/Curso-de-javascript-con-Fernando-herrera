@@ -61,7 +61,7 @@ crearDeck(  );
 
 const pedirCarta = () => {
 
-    if (deck.length === 0 ){
+    if ( deck.length === 0 ){
         throw ' no hay cartas en el Deck'
     }
 
@@ -77,16 +77,24 @@ const pedirCarta = () => {
 
     //pedirCarta( );
 const valorCarta = ( carta ) => {
-
+    //codigo corto
     const valor = carta.substring(0, carta.length - 1);
-    let puntos = 0;
+    return  ( isNaN( valor ) ) ?
+            ( valor === 'A' )   ? 11 : 10
+            : valor * 1;
+
+
+    //Codigo largo
+    //let puntos = 0;
     // 2 = 2, 10 = 10, 3 = 3
-    if ( isNaN( valor ) ){
-        console.log('es un numero')
-    }else {
-        console.log('no es un numero')
-    }
-
+    //if ( isNaN( valor ) ) {    
+    //    puntos = ( valor === 'A') ? 11:10;
+    //} else {
+    //    console.log('es un numero')
+    //    puntos = valor * 1;
+    //}
+    //console.log(puntos)
 }
+const valor = valorCarta( pedirCarta() );
+console.log({ valor });
 
-valorCarta('2D');
