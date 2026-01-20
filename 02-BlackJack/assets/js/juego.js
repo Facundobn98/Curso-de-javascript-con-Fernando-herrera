@@ -48,7 +48,7 @@ const crearDeck = (  ) => {
     }
 
     // Mostramos el deck completo en consola
-    console.log( deck );
+    //console.log( deck );
     deck = _.shuffle( deck );
     console.log( deck )
     return deck;
@@ -57,4 +57,22 @@ const crearDeck = (  ) => {
 // Llamamos a la función para que se ejecute
 crearDeck(  );
 
+// esta funcion me permite tomar una carta
 
+const pedirCarta = () => {
+
+    const carta = deck.pop();
+
+    
+
+    
+    console.log(deck)
+    console.log(carta);
+    console.warn('...')
+    
+
+
+    return carta;
+}
+
+pedirCarta( )
