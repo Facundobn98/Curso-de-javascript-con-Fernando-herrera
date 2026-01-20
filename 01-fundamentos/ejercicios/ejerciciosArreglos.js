@@ -127,3 +127,20 @@ let nombres = ['Ana', 'Juan', 'Pedro', 'Lucia'];
 nombres.splice(2, 1, 'Carlos');
 
 console.log(nombres);
+
+//Ejercion 9
+/**Dado este arreglo:
+ * 
+let animales = ['gato', 'perro', 'loro', 'pez'];
+Mostrá por consola:
+El último elemento
+El penúltimo elemento
+📌 Restricción:
+❌ No escribir números fijos (nada de [3] o [2])
+ */
+
+
+
+
+
+
