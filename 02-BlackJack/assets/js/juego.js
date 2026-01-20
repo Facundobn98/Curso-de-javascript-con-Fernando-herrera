@@ -61,18 +61,32 @@ crearDeck(  );
 
 const pedirCarta = () => {
 
+    if (deck.length === 0 ){
+        throw ' no hay cartas en el Deck'
+    }
+
     const carta = deck.pop();
 
     
-
-    
-    console.log(deck)
     console.log(carta);
-    console.warn('...')
-    
-
+    console.log(deck);
 
     return carta;
 }
 
-pedirCarta( )
+
+    //pedirCarta( );
+const valorCarta = ( carta ) => {
+
+    const valor = carta.substring(0, carta.length - 1);
+    let puntos = 0;
+    // 2 = 2, 10 = 10, 3 = 3
+    if ( isNaN( valor ) ){
+        console.log('es un numero')
+    }else {
+        console.log('no es un numero')
+    }
+
+}
+
+valorCarta('2D');
