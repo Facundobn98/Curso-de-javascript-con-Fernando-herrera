@@ -139,7 +139,10 @@ El penúltimo elemento
 ❌ No escribir números fijos (nada de [3] o [2])
  */
 
+let animales = ['gato', 'perro', 'loro', 'pez']; 
 
+console.log(animales[animales.length - 1])
+console.log(animales[animales.length - 2])
 
 
 
