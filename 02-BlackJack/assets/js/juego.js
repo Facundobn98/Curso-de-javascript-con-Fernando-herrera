@@ -18,12 +18,15 @@ const tipos = ['C','D','H','S'];
 // Cartas especiales (las que no son numéricas)
 const especiales = ['A','J','Q','K'];
 
-// referencias del HTML
-const btnPedir = document.querySelector('#btnPedir')
-
 let puntosJugador = 0;
     puntosComputadora = 0;
 
+// referencias del HTML
+const btnPedir = document.querySelector('#btnPedir')
+
+
+
+const divCartasJugador = document.querySelector('#jugador-cartas');
 const puntosHTML = document.querySelectorAll('small');
 
 
@@ -109,6 +112,18 @@ btnPedir.addEventListener('click', () => {
 
     puntosJugador = puntosJugador + valorCarta( carta );
     puntosHTML[0].innerText = puntosJugador;
+
+    const imgCarta = document.createElement('img');
+    imgCarta.src = `assets/cartas/${ carta }.png`;
+    imgCarta.classList.add('carta')
+    divCartasJugador.append( imgCarta );
+
+    if (puntosJugador > 21){
+        console.warn('perdiste')
+        btnPedir.disabled = true
+    }else if (puntosJugador === 21){
+        console.warn('ganaste')
+    }
 
 });
 
