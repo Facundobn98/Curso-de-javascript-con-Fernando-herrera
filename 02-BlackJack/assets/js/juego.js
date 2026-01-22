@@ -18,6 +18,16 @@ const tipos = ['C','D','H','S'];
 // Cartas especiales (las que no son numéricas)
 const especiales = ['A','J','Q','K'];
 
+// referencias del HTML
+const btnPedir = document.querySelector('#btnPedir')
+
+let puntosJugador = 0;
+    puntosComputadora = 0;
+
+const puntosHTML = document.querySelectorAll('small');
+
+
+
 // Función que crea el mazo de cartas
 const crearDeck = (  ) => {
 
@@ -50,7 +60,7 @@ const crearDeck = (  ) => {
     // Mostramos el deck completo en consola
     //console.log( deck );
     deck = _.shuffle( deck );
-    console.log( deck )
+    
     return deck;
 }
 
@@ -66,10 +76,6 @@ const pedirCarta = () => {
     }
 
     const carta = deck.pop();
-
-    
-    console.log(carta);
-    console.log(deck);
 
     return carta;
 }
@@ -95,6 +101,14 @@ const valorCarta = ( carta ) => {
     //}
     //console.log(puntos)
 }
-const valor = valorCarta( pedirCarta() );
-console.log({ valor });
+//  Eventos
+
+btnPedir.addEventListener('click', () => {
+
+    const carta = pedirCarta();
+
+    puntosJugador = puntosJugador + valorCarta( carta );
+    puntosHTML[0].innerText = puntosJugador;
+
+});
 
