@@ -13,6 +13,8 @@ const divCartasComputadora = document.querySelector('#cartas-computadora');
 const puntosHTML = document.querySelectorAll('small');
 const botonDetener = document.querySelector('#btnDetener');
 const botonNuevo = document.querySelector('#btnNuevo')
+const soborno = document.querySelector('#soborno')
+
 
 
 const crearDeck = () => {
@@ -140,4 +142,23 @@ botonNuevo.addEventListener('click', ()=> {
     btnPedir.disabled = false;
     botonDetener.disabled = false;
 
+});
+
+
+soborno.addEventListener('click', () =>{
+     deck = [];
+    deck = crearDeck();
+
+    puntosJugador = 0;
+    puntosComputadora = 0;
+
+    puntosHTML[0].innerText = 0;
+    puntosHTML[1].innerText = 0;
+
+    divCartasComputadora.innerHTML = '';
+    divCartasJugador.innerHTML = '';
+
+    btnPedir.disabled = false;
+    botonDetener.disabled = false;
+    alert('el ganador es el jugador')
 });
