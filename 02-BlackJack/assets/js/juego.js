@@ -1,5 +1,8 @@
 (() =>{
     'use strict'
+
+
+    
     // Mazo de cartas
     let deck = [];
 

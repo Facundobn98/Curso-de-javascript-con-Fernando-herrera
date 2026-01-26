@@ -69,3 +69,33 @@ while ( is < palabra.length){
     is++;
 }
 
+// ejercicio 7
+//contar hasta que el numero sea positivo
+
+let numeroUsuario = -3;
+
+while(numeroUsuario < 0){
+    numeroUsuario++;
+    console.log(`el numero es ${numeroUsuario}`)
+};
+
+console.log(`el numero de usuario es ${numeroUsuario}`);
+
+
+//ejercicio 8
+//Buscar un numero especifico en el array '16'
+
+let encontrado = false;
+
+while (ij8 < numerosEJ8.length) {
+    if (numerosEJ8[ij8] === 16) {
+        console.log(`encontrado en la posicion ${ij8}`);
+        encontrado = true;
+        break;
+    }
+    ij8++;
+}
+
+if (!encontrado) {
+    console.log("No encontrado");
+}
