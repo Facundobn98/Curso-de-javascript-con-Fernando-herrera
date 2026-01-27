@@ -1,4 +1,17 @@
 //ejercicios con while
+/**Que el while entre, cambie una variable y salga.
+Nada más.*/
+let contador1 = 0;
+
+while (contador1 < 3){
+    contador++;
+}
+console.log('fin')
+
+
+
+
+//ejercicio 1
 //Mostrá por consola los números del 1 al 10 usando while.
 let numero = 0;
 
@@ -114,3 +127,20 @@ while (energia > 0) {
 }
 
 console.log('energia agotada');
+
+//ejercicio 10
+/** Repetir mientras intento sea distinto de password
+mostrar "Intento incorrecto"
+ir cambiando el valor de intento (simulado)
+cuando acierte, mostrar "Acceso concedido" */
+
+let intento = 0;
+let password = 3;
+
+while (intento !== password) {
+    console.log('intento incorrecto');
+    intento++;
+}
+
+console.log('acceso concedido');
+
