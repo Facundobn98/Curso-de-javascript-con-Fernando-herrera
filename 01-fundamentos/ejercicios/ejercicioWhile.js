@@ -85,6 +85,9 @@ console.log(`el numero de usuario es ${numeroUsuario}`);
 //ejercicio 8
 //Buscar un numero especifico en el array '16'
 
+let numerosEJ8 = [4, 8, 15, 16, 23, 42];
+let ij8 = 0;
+
 let encontrado = false;
 
 while (ij8 < numerosEJ8.length) {
@@ -99,3 +102,15 @@ while (ij8 < numerosEJ8.length) {
 if (!encontrado) {
     console.log("No encontrado");
 }
+//ejercicio 9
+//Este ejercicio hace que el while deje de ser solo recorrer y 
+//empiece a controlar un estado. Acá se da otro salto.
+
+let energia = 10;
+
+while (energia > 0) {
+    energia--;
+    console.log(`la energia es de ${energia}`);
+}
+
+console.log('energia agotada');
