@@ -1,13 +1,54 @@
 //ejercicios con while
 /**Que el while entre, cambie una variable y salga.
 Nada más.*/
-let contador1 = 0;
+let contador1 = 1;
 
-while (contador1 < 3){
-    contador++;
+while (contador1 <= 3){
+    console.log(contador1)
+    contador1++;
+};
+console.log('fin');
+//
+let n = 3;
+while (n >= 1){
+    console.log(n)
+    n--;
+};
+//
+let frutas = ['manzana', 'banana', 'pera'];
+let n2 = 0;
+while (n2 < frutas.length){
+    console.log(frutas[n2])
+    n2++;
 }
-console.log('fin')
+//
+let edades = [12, 18, 25, 14, 30];
+let n3 = 0;
+while (n3 < edades.length){
+    if (edades[n3] >= 18){
+        console.log(edades[n3])
+    }
+    n3++;
+}
+//
+let edades2 = [18, 18, 25, 14, 30, 37, 99];
+let n4 = 0;
+while( n4 < edades2.length){
+    if (edades2[n4] > 20){
+        console.log(edades2[n4])
+        break;
+    }
+    n4++;
+}
+let sum4 = 0;
+let numer0 = 1;
 
+while (sum4 < 20) {
+    sum4 = sum4 + numer0;
+    numer0++;
+}
+
+console.log(`la suma es ${sum4}`);
 
 
 
