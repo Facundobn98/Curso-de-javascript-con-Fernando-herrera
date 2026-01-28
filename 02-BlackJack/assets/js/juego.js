@@ -1,7 +1,5 @@
 (() =>{
     'use strict'
-
-
     
     // Mazo de cartas
     let deck = [];
@@ -29,6 +27,7 @@
 
     // Crea y mezcla el mazo
     const crearDeck = () => {
+        deck = [];
         for (let i = 2; i <= 10; i++) {
             for (let tipo of tipos) {
                 deck.push(i + tipo);
@@ -40,9 +39,8 @@
                 deck.push(especial + tipo);
             }
         }
+        return _.shuffle(deck);
 
-        deck = _.shuffle(deck);
-        return deck;
     }
 
     crearDeck();
