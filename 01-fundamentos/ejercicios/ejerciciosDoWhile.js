@@ -26,3 +26,34 @@ do {
     console.log(n2); // se imprime antes de evaluar la condición del while
     n2++;
 } while (n2 <= 5);
+//
+let opcion;
+
+do {
+  opcion = prompt(
+    "Elegí una opción:\n1 - Saludar\n2 - Despedirse\n3 - Salir"
+  );
+
+  if (opcion === "1") {
+    console.log("Hola");
+  } else if (opcion === "2") {
+    console.log("Chau");
+  }
+
+} while (opcion !== "3");
+//
+let numero;
+
+do {
+  numero = Number(prompt("Ingresá un número mayor a 0"));
+} while (numero <= 0 || isNaN(numero));
+
+console.log("Número válido:", numero);
+//let password;
+const passwordCorrecta = "1234";
+
+do {
+  password = prompt("Ingresá la contraseña");
+} while (password !== passwordCorrecta);
+
+console.log("Acceso concedido 🔓");
