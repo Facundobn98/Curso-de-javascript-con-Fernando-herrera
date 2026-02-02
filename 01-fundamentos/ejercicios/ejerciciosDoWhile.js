@@ -49,7 +49,8 @@ do {
 } while (numero <= 0 || isNaN(numero));
 
 console.log("Número válido:", numero);
-//let password;
+//
+let password;
 const passwordCorrecta = "1234";
 
 do {
