@@ -1,70 +1,51 @@
-// class Animal {
-//     nombre;
-//     tipo;
-//     sonido;
 
-//     constructor(nombre, tipo, sonido) {
-//         this.nombre = nombre;
-//         this.tipo = tipo;
-//         this.sonido = sonido;
-//     }
+class Animal {
+    nombre;
+    tipo;
+    sonido;
 
-//     presentarse() {
-//         console.log(
-//             `Hola, soy un ${this.tipo} llamado ${this.nombre} y produzco el sonido ${this.sonido}`
-//         );
-//     }
-// }
-// const firulais = new Animal('Firulais', 'perro', 'ladrido');
-// firulais.presentarse();
+    constructor(nombre, tipo, sonido) {
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.sonido = sonido;
+    }
+
+    presentarse() {
+        console.log(
+            `Hola, soy un ${this.tipo} llamado ${this.nombre} y produzco el sonido ${this.sonido}`
+        );
+    }
+}
+const perro = new Animal('Firulais', 'perro', 'ladrido');
+const gato = new Animal('timo', 'perro', 'maullido');
+const loro = new Animal('ramon', 'perro', 'lenguaje humano...');
+const animales = [perro,gato,loro]
+animales.forEach(animal => {
+    animal.presentarse();
+});
 //
-// class Animal {
-//     nombre;
-//     tipo;
-//     sonido;
-
-//     constructor(nombre, tipo, sonido) {
-//         this.nombre = nombre;
-//         this.tipo = tipo;
-//         this.sonido = sonido;
-//     }
-
-//     presentarse() {
-//         console.log(
-//             `Hola, soy un ${this.tipo} llamado ${this.nombre} y produzco el sonido ${this.sonido}`
-//         );
-//     }
-// }
-// const perro = new Animal('Firulais', 'perro', 'ladrido');
-// const gato = new Animal('timo', 'perro', 'maullido');
-// const loro = new Animal('ramon', 'perro', 'lenguaje humano...');
-// const animales = [perro,gato,loro]
-// animales.forEach(animal => {
-//     animal.presentarse();
-// });
-// //
-// class Usuario {
-//     nombre;
-//     rol;
-//     constructor(nombre,rol){
-//         this.nombre = nombre;
-//         this.rol = rol;
-//     }
-//     set setRol(nuevoRol){
-//         if (nuevoRol === 'admin' || nuevoRol === 'user'){
-//             this.rol = nuevoRol;
-//         }
-//         else {
-//             console.error('rol invalido')
-//         }
-//     }
-//     get info(){
-//       return `Usuario: ${this.nombre} | Rol: ${this.rol}`  
-//     }
-// }
-// const u = new Usuario('facundo','admin');
-// u.setRol = 'user' 
-// console.log(u.info);
+class Usuario {
+    nombre;
+    rol;
+    constructor(nombre,rol){
+        this.nombre = nombre;
+        this.rol = rol;
+    }
+    set setRol(nuevoRol){
+        if (nuevoRol === 'admin' || nuevoRol === 'user'){
+            this.rol = nuevoRol;
+        }
+        else {
+            console.error('rol invalido')
+        }
+    }
+    get info(){
+      return `Usuario: ${this.nombre} | Rol: ${this.rol}`  
+    }
+}
+const u = new Usuario('facundo','admin');
+u.setRol = 'user' 
+console.log(u.info);
 //
 class Persona {
     nombre;
@@ -83,3 +64,53 @@ const u2 = new Persona('malena','25')
 
 u1.saludar();
 u2.saludar();
+
+class Contador {
+    valor;
+    constructor(valor){
+        this.valor = valor;
+    }
+    incrementar(){
+        this.valor = this.valor + 1;
+;
+    };
+    decrementar(){
+        this.valor = this.valor - 1;
+;
+    };
+    mostrar(){
+        console.log(`el valor es ${this.valor}`)
+    };
+}
+
+const n1 = new Contador(0)
+
+n1.mostrar()
+//
+class Cuenta {
+    titular;
+    saldo;
+
+    constructor(titular, saldo = 0) {
+        this.titular = titular;
+        this.saldo = saldo;
+    }
+
+    depositar(monto) {
+        this.saldo = this.saldo + monto;
+    }
+
+    retirar(monto) {
+        if (monto > this.saldo) {
+            console.error('saldo insuficiente');
+        } else {
+            this.saldo = this.saldo - monto;
+        }
+    }
+
+    mostrarSaldo() {
+        console.log(`Titular: ${this.titular} | Saldo: ${this.saldo}`);
+    }
+}
+//
+
