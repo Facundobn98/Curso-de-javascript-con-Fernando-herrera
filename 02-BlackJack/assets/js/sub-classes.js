@@ -1,5 +1,3 @@
-
-
 class Persona {
     static _Conteo = 0;
     static get Conteo(){
@@ -9,7 +7,6 @@ class Persona {
         console.log( this.nombre );// undefined
         console.log('hola soy metodo estatico');
     }
-
     nombre = '';
     codigo = '';
     frase = '';
@@ -21,7 +18,6 @@ class Persona {
 
             Persona._Conteo++;
         };
-
         set setComidaFavorita(comida){
             this.comida = comida;
         };
@@ -36,21 +32,19 @@ class Persona {
             console.log(`mi frase es ${this.frase}`)
         };
 };
+class Heroe extends Persona{
+    clan;
+    
+    constructor (nombre,codigo,frase){
 
-const spiderman = new Persona('peter','spiderman','hola');
-const ironman = new Persona('tony','ironman','hola');
-console.log( ironman );
-
-spiderman.quienSoy();
-
-spiderman.setComidaFavorita = 'sanguche de milanesa';
-// spiderman.comida = 'epstein'
-
-//Persona._conteo = 2;
-console.log( 'conteo statico', Persona._Conteo );
-console.log( Persona.Conteo );
-Persona.mensaje();
-
-Persona.propiedadExterna = 'hola mundo';
-
-console.log( Persona );
+        super(nombre,codigo,frase)
+        this.clan = 'los vengadores';                   
+    };
+    quienSoy(){
+        console.log(`soy ${this.nombre},${this.clan} `);
+        super.quienSoy();
+    }
+};
+//const spiderman = new Persona('peter','spiderman','hola');
+const spiderman = new Heroe();
+console.log(spiderman);
