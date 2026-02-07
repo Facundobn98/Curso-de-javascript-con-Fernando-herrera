@@ -112,6 +112,36 @@ class Cuenta {
         console.log(`Titular: ${this.titular} | Saldo: ${this.saldo}`);
     }
 }
-//Ejercicio grande
- 
+//
+
+class Persona {
+    static _Conteo = 0;
+
+    constructor(){
+        Persona._Conteo++;
+    }
+    static get conteo(){
+        return Persona._Conteo;
+    }
+}
+
+class Heroe extends Persona{
+    constructor(){
+        super() //obligatorio y que este primero
+        //aca escribiria el contructor del hijo
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
